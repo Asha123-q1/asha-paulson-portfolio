@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asha Paulson | Data Analyst & BI Specialist</title>
+  <meta name="description" content="Portfolio of Asha Paulson - Data Analyst skilled in Power BI, SQL, Python, Excel, and Machine Learning (XGBoost 97.95%). Turning messy data into decision-ready insights." />
+  <meta name="keywords" content="Asha Paulson, Data Analyst, Power BI, Python, SQL, Machine Learning, XGBoost, Kerala, Thrissur, Portfolio" />
+  <meta property="og:title" content="Asha Paulson | Data Analyst Portfolio" />
+  <meta property="og:description" content="Turning complex, messy data into high-impact executive insights with Power BI, Python, SQL, and Machine Learning." />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#06B6D4',
+              indigo: '#6366F1',
+              emerald: '#10B981',
+              dark: '#080C15',
+              card: '#111827'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="bg-[#080C15] text-slate-100 antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- ========================================================================
+       NAVIGATION BAR
+       ======================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300">
+          <span class="font-bold text-white tracking-wider text-base font-mono">AP</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-base sm:text-lg tracking-tight group-hover:text-cyan-400 transition-colors">Asha Paulson</span>
+          <span class="text-[11px] text-cyan-400 font-mono tracking-widest uppercase flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Data Analyst
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="nav-link hover:text-cyan-400 transition-colors">About</a>
+        <a href="#live-analytics" class="nav-link hover:text-cyan-400 transition-colors flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          Live Analytics
+        </a>
+        <a href="#projects" class="nav-link hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="#experience" class="nav-link hover:text-cyan-400 transition-colors">Experience</a>
+        <a href="#skills" class="nav-link hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#education" class="nav-link hover:text-cyan-400 transition-colors">Education</a>
+        <a href="#resume" class="nav-link hover:text-cyan-400 transition-colors">Resume</a>
+        <a href="#contact" class="nav-link hover:text-cyan-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Actions: Theme Toggle + CV Download + Contact CTA -->
+      <div class="hidden sm:flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle-btn" class="p-2.5 rounded-xl border border-slate-700/60 bg-slate-800/40 hover:bg-slate-700/40 text-slate-300 hover:text-cyan-400 transition-all duration-200" aria-label="Toggle Theme">
+          <svg id="theme-toggle-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <!-- Download CV Button -->
+        <a href="assets/Asha_Paulson_Resume.pdf" download="Asha_Paulson_Resume.pdf" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-200 bg-slate-800/80 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500/40 transition-all shadow-sm">
+          <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Download CV
+        </a>
+
+        <!-- Hire Me CTA -->
+        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all">
+          Hire Me
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <button id="mobile-menu-toggle" class="p-2.5 rounded-xl border border-slate-700/60 bg-slate-800/40 text-slate-300 hover:text-white" aria-label="Open Navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="hidden lg:hidden glass-panel border-t border-slate-800 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 text-base font-medium">
+        <a href="#about" class="text-slate-300 hover:text-cyan-400 py-1">About</a>
+        <a href="#live-analytics" class="text-slate-300 hover:text-cyan-400 py-1 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Live Analytics
+        </a>
+        <a href="#projects" class="text-slate-300 hover:text-cyan-400 py-1">Projects</a>
+        <a href="#experience" class="text-slate-300 hover:text-cyan-400 py-1">Experience</a>
+        <a href="#skills" class="text-slate-300 hover:text-cyan-400 py-1">Skills</a>
+        <a href="#education" class="text-slate-300 hover:text-cyan-400 py-1">Education</a>
+        <a href="#resume" class="text-slate-300 hover:text-cyan-400 py-1">Resume</a>
+        <a href="#contact" class="text-slate-300 hover:text-cyan-400 py-1">Contact</a>
+        <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
+          <a href="assets/Asha_Paulson_Resume.pdf" download="Asha_Paulson_Resume.pdf" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold text-slate-200 bg-slate-800 border border-slate-700">
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download Official CV
+          </a>
+          <a href="#contact" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section id="home" class="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
+    <!-- Particle Canvas Background -->
+    <canvas id="hero-canvas" class="absolute inset-0 pointer-events-auto z-0"></canvas>
+
+    <!-- Glowing Background Ambient Orbs -->
+    <div class="glow-orb w-96 h-96 bg-cyan-600/25 top-1/4 -left-20"></div>
+    <div class="glow-orb w-96 h-96 bg-indigo-600/25 bottom-10 -right-20"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 flex flex-col items-start space-y-6 reveal stagger-1">
+          
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-medium shimmer-badge">
+            <span class="status-beacon w-2 h-2 rounded-full bg-emerald-400"></span>
+            Available for Data Analyst Roles &bull; Immediate Joiner
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+            Turning Messy Data Into <br class="hidden sm:inline" />
+            <span class="gradient-text">Decision-Ready Insights</span>
+          </h1>
+
+          <!-- Dynamic Typing Tagline -->
+          <div class="text-lg sm:text-xl font-medium text-slate-300 flex items-center">
+            <span>Specialized in&nbsp;</span>
+            <span id="typing-text" class="text-cyan-400 font-semibold font-mono">Data Analyst</span>
+            <span class="cursor-blink h-6"></span>
+          </div>
+
+          <!-- Narrative Hook -->
+          <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+            I am <strong class="text-slate-200">Asha Paulson</strong>, a Computer Science graduate with real-world internship experience across 
+            <span class="text-cyan-300 font-medium">Excel, SQL, Power BI, and Python</span>. From designing DAX-driven executive dashboards to training high-precision predictive models (<span class="text-emerald-300 font-medium font-mono">97.95% XGBoost</span>), I bridge deep analytical rigor with commercial impact.
+          </p>
+
+          <!-- Action Buttons with Magnetic Physics -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#live-analytics" class="magnetic-btn px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              Explore Live Analytics
+            </a>
+            
+            <a href="#projects" class="magnetic-btn px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-200 glass-panel hover:bg-slate-800/80 border border-slate-700 hover:border-slate-500 transition-all flex items-center gap-2">
+              View Case Studies
+              <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+
+            <a href="assets/Asha_Paulson_Resume.pdf" download="Asha_Paulson_Resume.pdf" class="magnetic-btn px-5 py-3.5 rounded-xl font-semibold text-sm text-slate-300 hover:text-white border border-slate-700/80 hover:border-cyan-400/50 bg-slate-900/50 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Resume PDF
+            </a>
+          </div>
+
+          <!-- Contact Quick Badges -->
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-5 text-xs text-slate-400 pt-3">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              </svg>
+              Thrissur, Kerala, India
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              ashapaulson11a@gmail.com
+            </span>
+            <a href="https://linkedin.com/in/asha-paulson1" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-cyan-400 transition-colors">
+              <svg class="w-3.5 h-3.5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              linkedin.com/in/asha-paulson1
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Showcase -->
+        <div class="lg:col-span-5 relative flex flex-col items-center justify-center reveal stagger-2">
+          <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-none">
+            
+            <!-- Aura Ambient Pulse Glow behind photo frame -->
+            <div class="aura-glow">
+              <!-- Conic Gradient Frame with 3D Tilt -->
+              <div class="conic-border-frame tilt-card shadow-2xl" data-tilt>
+                <!-- Pristine, Unobstructed Image Card (No Overlaid Text) -->
+                <div class="rounded-[18px] overflow-hidden bg-slate-950 relative">
+                  <img 
+                    src="assets/profile.jpg" 
+                    alt="Asha Paulson - Data Analyst" 
+                    class="w-full aspect-square max-w-[460px] mx-auto object-cover object-center hover:scale-[1.02] transition-transform duration-700 ease-out block"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Clean Sub-Card Info Bar (Neatly below the photo, NOT overlapping) -->
+            <div class="mt-4 p-4 rounded-xl glass-panel border border-slate-700/80 shadow-lg flex items-center justify-between text-xs reveal stagger-3">
+              <div class="flex items-center gap-2.5">
+                <span class="status-beacon w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                <span class="font-bold text-white tracking-wide">Asha Paulson</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-cyan-400 font-medium">Data Analyst</span>
+                <span class="text-slate-500">&bull;</span>
+                <span class="font-mono text-slate-300">Power BI &bull; Python</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       KEY STATS STRIP
+       ======================================================================== -->
+  <section id="stats-section" class="relative z-10 border-y border-slate-800/80 bg-slate-900/60 backdrop-blur-md py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="p-4 rounded-xl hover:bg-slate-800/40 transition-all spotlight-card reveal stagger-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400 font-mono counter-val" data-target="97.95" data-decimals="2" data-suffix="%">0%</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Predictive Model Accuracy (XGBoost)</div>
+        </div>
+
+        <div class="p-4 rounded-xl hover:bg-slate-800/40 transition-all spotlight-card reveal stagger-2">
+          <div class="text-3xl sm:text-4xl font-extrabold text-indigo-400 font-mono counter-val" data-target="5" data-decimals="0" data-suffix="+ Mos">0</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Data Analyst Internship (Knovista)</div>
+        </div>
+
+        <div class="p-4 rounded-xl hover:bg-slate-800/40 transition-all spotlight-card reveal stagger-3">
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono counter-val" data-target="3" data-decimals="0" data-suffix="+">0</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">End-to-End Enterprise Projects</div>
+        </div>
+
+        <div class="p-4 rounded-xl hover:bg-slate-800/40 transition-all spotlight-card reveal stagger-4">
+          <div class="text-3xl sm:text-4xl font-extrabold text-purple-400 font-mono counter-val" data-target="7.28" data-decimals="2" data-prefix="CGPA ">0</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">B.Tech Computer Science & Eng.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       LIVE ANALYTICS & INTERACTIVE DATA SHOWCASE (THE WOW FACTOR)
+       ======================================================================== -->
+  <section id="live-analytics" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-mono uppercase tracking-wider shimmer-badge">
+          Interactive Portfolio Feature
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+          Live Interactive <span class="gradient-text">Analytics Showcase</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 leading-relaxed">
+          Recruiters often see static screenshots — here, you can directly interact with simulated executive sales models, model performance benchmarks, and live query calculations.
+        </p>
+      </div>
+
+      <!-- Feature Card 1: Executive Sales & Profitability Dashboard -->
+      <div class="glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-6 sm:p-8 mb-12 shadow-2xl relative">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse"></span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white">Executive Sales & KPI Dashboard</h3>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-cyan-300 border border-slate-700">Power BI Style</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">
+              Select geographic market region to dynamically recalculate revenue trends, margin % and net profitability:
+            </p>
+          </div>
+
+          <!-- Region Filter Buttons -->
+          <div class="flex flex-wrap gap-2">
+            <button data-region="all" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-cyan-500/50 bg-cyan-500/20 text-cyan-400 transition-all hover:bg-cyan-500/30 active">
+              Global (All)
+            </button>
+            <button data-region="northAmerica" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-700 bg-slate-800 text-slate-300 transition-all hover:bg-slate-700">
+              North America
+            </button>
+            <button data-region="europe" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-700 bg-slate-800 text-slate-300 transition-all hover:bg-slate-700">
+              Europe
+            </button>
+            <button data-region="apac" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-700 bg-slate-800 text-slate-300 transition-all hover:bg-slate-700">
+              Asia Pacific
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic KPI Mini Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Total Sales</div>
+            <div id="kpi-sales" class="text-2xl sm:text-3xl font-bold text-white font-mono mt-1">$125,680</div>
+            <div id="kpi-growth" class="text-xs text-emerald-400 font-medium mt-1 flex items-center gap-1">
+              <span>↑</span> +12.5% vs prior year
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Total Profit</div>
+            <div id="kpi-profit" class="text-2xl sm:text-3xl font-bold text-emerald-400 font-mono mt-1">$28,450</div>
+            <div class="text-xs text-emerald-400/80 font-medium mt-1">Healthy Target Met</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Profit Margin</div>
+            <div id="kpi-margin" class="text-2xl sm:text-3xl font-bold text-cyan-400 font-mono mt-1">22.6%</div>
+            <div class="text-xs text-slate-400 font-medium mt-1">DAX Measure: DIVIDE([Profit],[Sales])</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Top Performing Category</div>
+            <div class="text-xl sm:text-2xl font-bold text-indigo-400 font-mono mt-1">Technology</div>
+            <div class="text-xs text-slate-400 font-medium mt-1">41% Contribution Share</div>
+          </div>
+        </div>
+
+        <!-- Chart Canvas Container -->
+        <div class="chart-wrapper">
+          <canvas id="sales-performance-chart"></canvas>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Interactive Chart: hover over monthly intervals to inspect revenue breakdowns.
+          </span>
+          <span class="font-mono text-slate-500">Source: FactSales & DimDate Model (Star Schema)</span>
+        </div>
+      </div>
+
+
+      <!-- Two Column Layout: ML Model Benchmark + DAX/SQL Playground -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: ML Benchmark Chart (Lead Conversion 97.95%) -->
+        <div class="lg:col-span-6 glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-6 sm:p-8 shadow-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold">Lead Conversion Pipeline</span>
+              <h3 class="text-xl font-bold text-white mt-1">ML Model Benchmark Comparison</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold border border-cyan-500/40">
+              XGBoost: 97.95%
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 mb-6">
+            Evaluated 3 candidate classifiers using 5-fold cross-validation. XGBoost significantly outperformed standard Logistic Regression and Random Forest across all operational metrics.
+          </p>
+
+          <div class="chart-wrapper" style="height: 260px;">
+            <canvas id="ml-benchmark-chart"></canvas>
+          </div>
+
+          <!-- Highlight takeaway box -->
+          <div class="mt-6 p-4 rounded-xl bg-cyan-950/20 border border-cyan-800/40 text-xs text-slate-300 space-y-1.5">
+            <div class="font-bold text-cyan-300 flex items-center gap-1.5">
+              <span>🎯</span> Analytical Takeaway & Recommendation:
+            </div>
+            <p>
+              XGBoost attained <strong>97.95% Accuracy</strong> and <strong>97.10% F1-Score</strong> with superior handling of non-linear engagement feature interactions, resulting in minimal false-positive lead assignments.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Interactive DAX & SQL Studio -->
+        <div class="lg:col-span-6 glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-6 sm:p-8 shadow-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-semibold">Code & Query Rigor</span>
+              <h3 class="text-xl font-bold text-white mt-1">DAX & SQL Studio</h3>
+            </div>
+            <button id="copy-code-btn" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-700 hover:border-cyan-500/40 transition-colors flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+              </svg>
+              Copy Code
+            </button>
+          </div>
+
+          <!-- Snippet selector tabs -->
+          <div class="flex flex-wrap gap-2 mb-4 border-b border-slate-800 pb-3">
+            <button data-snippet="dax1" class="px-3 py-1.5 rounded-md text-xs font-mono border border-cyan-400 text-cyan-400 bg-cyan-500/10 active">
+              DAX: YoY Growth %
+            </button>
+            <button data-snippet="dax2" class="px-3 py-1.5 rounded-md text-xs font-mono border border-slate-700 text-slate-300 hover:text-cyan-400">
+              DAX: Margin %
+            </button>
+            <button data-snippet="sql1" class="px-3 py-1.5 rounded-md text-xs font-mono border border-slate-700 text-slate-300 hover:text-cyan-400">
+              SQL: Lead Cohorts
+            </button>
+            <button data-snippet="sql2" class="px-3 py-1.5 rounded-md text-xs font-mono border border-slate-700 text-slate-300 hover:text-cyan-400">
+              SQL: Fraud Velocity
+            </button>
+          </div>
+
+          <!-- Title & explanation -->
+          <div class="mb-3">
+            <h4 id="playground-title" class="text-sm font-bold text-slate-100">YoY Sales Growth % (DAX Measure)</h4>
+            <p id="playground-desc" class="text-xs text-slate-400 mt-0.5">Calculates current period sales vs previous year period using CALCULATE and SAMEPERIODLASTYEAR.</p>
+          </div>
+
+          <!-- Code Box -->
+          <div class="code-container rounded-xl p-4 overflow-x-auto text-xs text-cyan-300 font-mono mb-4 border border-slate-800/80 shadow-inner">
+            <pre><code id="playground-code">-- Loading snippet...</code></pre>
+          </div>
+
+          <!-- Simulated Result Table -->
+          <div>
+            <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold mb-2 flex items-center justify-between">
+              <span>Simulated Execution Output</span>
+              <span class="text-emerald-400">● Query Succeeded (0.04s)</span>
+            </div>
+            <div class="overflow-x-auto rounded-lg border border-slate-800 bg-slate-900/60">
+              <table class="w-full text-xs">
+                <thead class="bg-slate-800/80">
+                  <tr id="playground-table-header"></tr>
+                </thead>
+                <tbody id="playground-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       ABOUT ME SECTION
+       ======================================================================== -->
+  <section id="about" class="py-24 bg-slate-900/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Analytical Philosophy & Pillars -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 font-mono uppercase tracking-wider">
+            Background & Mindset
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Bridging <span class="gradient-text">Computer Science Fundamentals</span> with Commercial Data Storytelling
+          </h2>
+
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              I graduated with a <strong>B.Tech in Computer Science and Engineering</strong> from Nirmala College of Engineering (APJ Abdul Kalam Technological University) with a <strong>CGPA of 7.28</strong>.
+            </p>
+            <p>
+              My journey started with software algorithms and development, but I quickly realized where my genuine passion lies: <span class="text-cyan-400 font-medium">interrogating data to discover why numbers move, forecasting trends, and giving leadership actionable intelligence</span>.
+            </p>
+            <p>
+              During my 5-month internship as a <strong>Data Analyst Intern at Knovista Technologies</strong>, I handled complete data lifecycles — connecting raw CSV and SQL tables through Power Query, defining dynamic DAX calculations, and building live dashboards that eliminated hours of manual executive reporting.
+            </p>
+          </div>
+
+          <!-- 4 Core Pillars Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="p-4 rounded-xl glass-panel border border-slate-800 hover:border-cyan-500/40 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-sm mb-2">
+                01
+              </div>
+              <h4 class="font-bold text-white text-sm">Data Cleansing & EDA</h4>
+              <p class="text-xs text-slate-400 mt-1">Transforming messy, incomplete data into pristine relational models with Pandas & Power Query.</p>
+            </div>
+
+            <div class="p-4 rounded-xl glass-panel border border-slate-800 hover:border-indigo-500/40 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm mb-2">
+                02
+              </div>
+              <h4 class="font-bold text-white text-sm">DAX & BI Dashboards</h4>
+              <p class="text-xs text-slate-400 mt-1">Building self-serve Power BI interfaces with custom slicers, drill-throughs, and time intelligence.</p>
+            </div>
+
+            <div class="p-4 rounded-xl glass-panel border border-slate-800 hover:border-emerald-500/40 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm mb-2">
+                03
+              </div>
+              <h4 class="font-bold text-white text-sm">Predictive Modeling</h4>
+              <p class="text-xs text-slate-400 mt-1">Applying XGBoost, Random Forest, and Scikit-learn for conversion scoring and fraud detection.</p>
+            </div>
+
+            <div class="p-4 rounded-xl glass-panel border border-slate-800 hover:border-purple-500/40 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-sm mb-2">
+                04
+              </div>
+              <h4 class="font-bold text-white text-sm">Stakeholder Communication</h4>
+              <p class="text-xs text-slate-400 mt-1">Translating complex statistical metrics into clear executive takeaways and KPI action plans.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right: Profile Fact Card & Desk Visual -->
+        <div class="lg:col-span-5">
+          <div class="glass-panel rounded-2xl border border-slate-700/80 p-6 sm:p-8 shadow-2xl relative">
+            
+            <div class="flex items-center gap-4 pb-6 border-b border-slate-800">
+              <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-cyan-400 shadow-md">
+                <img src="assets/profile.jpg" alt="Asha Paulson" class="w-full h-full object-cover object-center" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">Asha Paulson</h3>
+                <p class="text-xs text-cyan-400 font-mono">Data Analyst &bull; CS Graduate</p>
+                <div class="flex items-center gap-1.5 mt-1 text-xs text-slate-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  Ready to add value on Day 1
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Info List -->
+            <div class="divide-y divide-slate-800/80 text-xs sm:text-sm">
+              <div class="py-3 flex justify-between">
+                <span class="text-slate-400">Education</span>
+                <span class="text-white font-medium text-right">B.Tech Computer Science (2022-2026)</span>
+              </div>
+              <div class="py-3 flex justify-between">
+                <span class="text-slate-400">University</span>
+                <span class="text-white font-medium text-right">APJ Abdul Kalam Technological Univ.</span>
+              </div>
+              <div class="py-3 flex justify-between">
+                <span class="text-slate-400">CGPA</span>
+                <span class="text-cyan-400 font-mono font-bold">7.28 / 10.0</span>
+              </div>
+              <div class="py-3 flex justify-between">
+                <span class="text-slate-400">Location</span>
+                <span class="text-white font-medium">Thrissur / Kochi, Kerala</span>
+              </div>
+              <div class="py-3 flex justify-between">
+                <span class="text-slate-400">Languages</span>
+                <span class="text-white font-medium">English (Fluent), Malayalam (Native)</span>
+              </div>
+              <div class="py-3 flex justify-between">
+                <span class="text-slate-400">Certifications</span>
+                <span class="text-indigo-400 font-medium text-right">Knovista, GSeven, Avodha MERN</span>
+              </div>
+            </div>
+
+            <!-- Download Button -->
+            <div class="mt-6 pt-4 border-t border-slate-800">
+              <a href="assets/Asha_Paulson_Resume.pdf" download="Asha_Paulson_Resume.pdf" class="w-full py-3 rounded-xl font-semibold text-xs sm:text-sm text-center text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500/50 transition-all flex items-center justify-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download Verified Resume (PDF)
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       FEATURED PROJECTS SECTION
+       ======================================================================== -->
+  <section id="projects" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-mono uppercase tracking-wider">
+            Portfolio Work
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+            Featured <span class="gradient-text">Data & BI Projects</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+            Real end-to-end projects demonstrating data modeling, automated ETL pipelines, advanced DAX, and machine learning deployments.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap gap-2">
+          <button data-project-filter="all" class="px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-500 text-white transition-all active">
+            All Projects
+          </button>
+          <button data-project-filter="bi" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white transition-all">
+            Power BI & Dashboards
+          </button>
+          <button data-project-filter="ml" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white transition-all">
+            Machine Learning & ML
+          </button>
+          <button data-project-filter="python" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white transition-all">
+            Python & Full-Stack
+          </button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- PROJECT 1: Lead Conversion Prediction -->
+        <div data-project-category="ml python" data-tilt class="glass-panel spotlight-card tilt-card reveal stagger-1 rounded-2xl border border-slate-700/80 overflow-hidden flex flex-col group hover:border-cyan-500/50 transition-all duration-300 shadow-xl">
+          <div class="p-6 sm:p-7 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                Machine Learning
+              </span>
+              <span class="text-xs font-bold text-emerald-400 font-mono flex items-center gap-1">
+                ⭐ 97.95% Best Score
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              Lead Conversion Prediction Pipeline
+            </h3>
+            
+            <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+              Built an end-to-end lead scoring pipeline to identify high-probability prospective clients. Evaluated Logistic Regression, Random Forest, and XGBoost classifiers with thorough feature engineering.
+            </p>
+
+            <ul class="space-y-1.5 my-5 text-xs text-slate-300">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span><strong>97.95% Accuracy</strong> achieved with tuned XGBoost</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span>Preprocessed raw behavioral data & automated feature scaling</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span>Cross-validation with Precision, Recall & F1-score</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-slate-800">
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Python</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Pandas</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Scikit-learn</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-cyan-300">XGBoost</span>
+            </div>
+
+            <button data-open-modal="lead-conversion" class="mt-5 w-full py-2.5 rounded-xl text-xs font-semibold text-center text-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 transition-colors flex items-center justify-center gap-2">
+              <span>View Full Case Study</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Sales Performance Dashboard -->
+        <div data-project-category="bi" data-tilt class="glass-panel spotlight-card tilt-card reveal stagger-2 rounded-2xl border border-slate-700/80 overflow-hidden flex flex-col group hover:border-cyan-500/50 transition-all duration-300 shadow-xl">
+          <div class="p-6 sm:p-7 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                Power BI & BI
+              </span>
+              <span class="text-xs font-bold text-cyan-400 font-mono">
+                Executive BI Suite
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              Sales Performance Executive Dashboard
+            </h3>
+            
+            <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+              Designed an interactive Power BI dashboard tracking monthly sales trends, margins, and regional performance. Implemented custom DAX measures, slicers, and dynamic drill-throughs for leadership.
+            </p>
+
+            <ul class="space-y-1.5 my-5 text-xs text-slate-300">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                <span><strong>Self-serve analytics</strong> eliminating manual reporting requests</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                <span>Wrote complex DAX (YoY Growth, MTD, Margin %, Ranking)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                <span>Multi-level drill-through from Global to SKU level</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-slate-800">
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Power BI</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-cyan-300">DAX</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Power Query</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Data Modeling</span>
+            </div>
+
+            <button data-open-modal="sales-dashboard" class="mt-5 w-full py-2.5 rounded-xl text-xs font-semibold text-center text-indigo-400 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 transition-colors flex items-center justify-center gap-2">
+              <span>View Full Case Study</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: UPI Fraud Detection in E-Commerce -->
+        <div data-project-category="ml python" data-tilt class="glass-panel spotlight-card tilt-card reveal stagger-3 rounded-2xl border border-slate-700/80 overflow-hidden flex flex-col group hover:border-cyan-500/50 transition-all duration-300 shadow-xl">
+          <div class="p-6 sm:p-7 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                FinTech & ML
+              </span>
+              <span class="text-xs font-bold text-amber-400 font-mono">
+                Final-Year Group Project
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              UPI Fraud Detection in E-Commerce
+            </h3>
+            
+            <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+              Integrated Razorpay UPI payments into an e-commerce platform alongside a machine learning-based fraud detection layer, screening transaction and behavioral features in real time.
+            </p>
+
+            <ul class="space-y-1.5 my-5 text-xs text-slate-300">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span><strong>Real-time risk scoring</strong> during checkout webhook</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Ensemble models: Logistic Regression, RF & Gradient Boosting</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Collaborative 4-member final year engineering team</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-slate-800">
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Python</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Machine Learning</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-emerald-300">Razorpay API</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/80 text-slate-300">Full-Stack</span>
+            </div>
+
+            <button data-open-modal="fraud-detection" class="mt-5 w-full py-2.5 rounded-xl text-xs font-semibold text-center text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition-colors flex items-center justify-center gap-2">
+              <span>View Full Case Study</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       WORK EXPERIENCE & INTERNSHIPS
+       ======================================================================== -->
+  <section id="experience" class="py-24 bg-slate-900/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-mono uppercase tracking-wider">
+          Track Record
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+          Professional <span class="gradient-text">Experience & Internships</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Demonstrated analytical deliverables across corporate reporting and software development.
+        </p>
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="max-w-4xl mx-auto relative pl-6 sm:pl-8 border-l-2 border-slate-800 space-y-12">
+        
+        <!-- EXPERIENCE 1: Knovista Technologies -->
+        <div class="relative group">
+          <!-- Timeline Node -->
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-cyan-500 border-4 border-[#080C15] group-hover:scale-125 transition-transform shadow-lg shadow-cyan-500/40"></div>
+
+          <div class="glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-6 sm:p-8 hover:border-cyan-500/50 transition-all shadow-xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-white">Data Analyst Intern</h3>
+                <div class="text-sm font-medium text-cyan-400">Knovista Technologies, Kochi</div>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-mono font-semibold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 self-start sm:self-auto">
+                May 2026 – Sep 2026 (5 months)
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Delivered complete end-to-end Power BI solutions from raw uncleaned business datasets through to interactive executive dashboard design used for continuous sales and performance reporting.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside mb-5">
+              <li>
+                Delivered a complete Power BI project end-to-end — from raw data cleaning through interactive dashboard design — used for ongoing sales and performance reporting.
+              </li>
+              <li>
+                Built dashboards and reports in Excel and Power BI that surfaced trends and KPIs for stakeholder review, reducing manual reporting effort.
+              </li>
+              <li>
+                Contributed to a Lead Conversion Prediction project, applying Python and machine learning to identify high-value leads with 97.95% accuracy.
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-cyan-300 border border-slate-700 font-mono">Power BI</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300 border border-slate-700 font-mono">DAX</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300 border border-slate-700 font-mono">Advanced Excel</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300 border border-slate-700 font-mono">SQL</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300 border border-slate-700 font-mono">Python ML</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-emerald-300 border border-slate-700 font-mono">KPI Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE 2: GSeven Technologies -->
+        <div class="relative group">
+          <!-- Timeline Node -->
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#080C15] group-hover:scale-125 transition-transform shadow-lg shadow-indigo-500/40"></div>
+
+          <div class="glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-6 sm:p-8 hover:border-indigo-500/50 transition-all shadow-xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-white">Python Development Intern</h3>
+                <div class="text-sm font-medium text-indigo-400">GSeven Technologies, Thrissur</div>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-mono font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/30 self-start sm:self-auto">
+                June 2025 (1 month)
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Academic internship focused on writing, testing, and debugging Python programs, cementing software engineering best practices, exception handling, and algorithmic problem-solving.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside mb-5">
+              <li>
+                Wrote and debugged Python programs as part of an academic internship, strengthening core programming and problem-solving skills.
+              </li>
+              <li>
+                Identified and resolved coding errors across multiple scripts, improving code reliability, modularity, and readability.
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-indigo-300 border border-slate-700 font-mono">Python 3</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300 border border-slate-700 font-mono">Script Debugging</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300 border border-slate-700 font-mono">Code Optimization</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300 border border-slate-700 font-mono">Algorithms</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       CORE SKILLS & TECH STACK MATRIX
+       ======================================================================== -->
+  <section id="skills" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-mono uppercase tracking-wider">
+          Technical Arsenal
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+          Core Skills & <span class="gradient-text">Proficiencies</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          From relational databases and data wrangling to predictive models and executive visual storytelling.
+        </p>
+
+        <!-- Skill category filters -->
+        <div class="flex flex-wrap justify-center gap-2 mt-8">
+          <button data-skill-filter="all" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition-all active">
+            All Skills
+          </button>
+          <button data-skill-filter="data-bi" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition-all">
+            Data Analysis & BI
+          </button>
+          <button data-skill-filter="prog-ml" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition-all">
+            Python & ML
+          </button>
+          <button data-skill-filter="db-sql" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition-all">
+            SQL & Databases
+          </button>
+          <button data-skill-filter="web-tools" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition-all">
+            Web & Dev Tools
+          </button>
+        </div>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Skill Card 1: Data Analysis & BI -->
+        <div data-skill-category="data-bi" class="glass-panel spotlight-card reveal stagger-1 rounded-2xl border border-slate-700/80 p-6 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">📊</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300">Core Specialty</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Power BI & Visualization</h3>
+            <p class="text-xs text-slate-400 mt-1">Interactive dashboards, Power Query, Data Modeling, DAX measures, Slicers, Drill-Through Reports, KPI Reporting.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-cyan-300">DAX</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Power Query (M)</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Star Schema</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Drill-Through</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 2: Advanced Excel -->
+        <div data-skill-category="data-bi" class="glass-panel spotlight-card reveal stagger-2 rounded-2xl border border-slate-700/80 p-6 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">📑</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Advanced MS Office</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Advanced Excel & Modeling</h3>
+            <p class="text-xs text-slate-400 mt-1">Pivot Tables & Charts, VLOOKUP, XLOOKUP, INDEX-MATCH, Nested Formulas, Conditional Formatting, Power Query, Dynamic Dashboards.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-emerald-300">XLOOKUP</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">INDEX-MATCH</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Pivot Tables</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Nested Logic</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 3: SQL & Databases -->
+        <div data-skill-category="db-sql" class="glass-panel spotlight-card reveal stagger-3 rounded-2xl border border-slate-700/80 p-6 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">🗄️</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">Relational DB</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">SQL & Database Architecture</h3>
+            <p class="text-xs text-slate-400 mt-1">MySQL, Complex Joins, Window Functions, Group By / Aggregations, Subqueries, CTEs, Data Retrieval & Performance Optimization.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-indigo-300">MySQL</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Window Functions</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Complex Joins</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">CTEs</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 4: Python & Data Science -->
+        <div data-skill-category="prog-ml" class="glass-panel spotlight-card reveal stagger-1 rounded-2xl border border-slate-700/80 p-6 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">🐍</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300">Core Language</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Python Data Stack</h3>
+            <p class="text-xs text-slate-400 mt-1">Python 3, Pandas, NumPy, Matplotlib, Seaborn. Automated data wrangling, missing value imputation, statistical summaries & visual plotting.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-cyan-300">Pandas</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">NumPy</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Matplotlib</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Seaborn</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 5: Machine Learning & Modeling -->
+        <div data-skill-category="prog-ml" class="glass-panel spotlight-card reveal stagger-2 rounded-2xl border border-slate-700/80 p-6 hover:border-purple-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">🧠</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Predictive AI</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Machine Learning & Modeling</h3>
+            <p class="text-xs text-slate-400 mt-1">Classification, Regression, Feature Engineering, Model Evaluation, Logistic Regression, Random Forest, XGBoost, Decision Trees.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-purple-300">XGBoost</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Scikit-learn</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Random Forest</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">ROC-AUC</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 6: Web & Development Tools -->
+        <div data-skill-category="web-tools" class="glass-panel spotlight-card reveal stagger-3 rounded-2xl border border-slate-700/80 p-6 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">🌐</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">Certified Full-Stack</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">MERN & Engineering Tools</h3>
+            <p class="text-xs text-slate-400 mt-1">MongoDB, Express.js, React.js, Node.js, JavaScript, REST APIs, Razorpay UPI Integration, Git, VS Code, Script Debugging.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-indigo-300">React.js</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Node.js</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">MongoDB</span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">REST APIs</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       EDUCATION & CERTIFICATIONS
+       ======================================================================== -->
+  <section id="education" class="py-24 bg-slate-900/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 font-mono uppercase tracking-wider">
+          Credentials
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+          Education & <span class="gradient-text">Certifications</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Academic foundation in Computer Science and industry-recognized professional credentials.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Degree Card -->
+        <div class="lg:col-span-5 glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-6 sm:p-8 shadow-xl">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-xl text-white shadow-lg shadow-cyan-500/20">
+              🎓
+            </div>
+            <div>
+              <span class="text-xs font-mono text-cyan-400 font-semibold uppercase">Degree</span>
+              <h3 class="text-xl font-bold text-white">B.Tech in Computer Science & Engineering</h3>
+            </div>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm text-slate-300 pt-2">
+            <p class="font-medium text-slate-100">
+              Nirmala College of Engineering, Chalakudy
+            </p>
+            <p class="text-slate-400">
+              APJ Abdul Kalam Technological University (KTU)
+            </p>
+            <div class="flex items-center justify-between py-2 border-y border-slate-800 text-xs">
+              <span class="text-slate-400">Duration</span>
+              <span class="text-slate-200 font-mono font-medium">2022 – 2026</span>
+            </div>
+            <div class="flex items-center justify-between py-1 text-xs">
+              <span class="text-slate-400">Cumulative GPA</span>
+              <span class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 font-mono font-bold border border-cyan-500/30">
+                CGPA: 7.28 / 10.0
+              </span>
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400">
+            <span class="font-semibold text-slate-300">Key Coursework:</span> Relational Database Management Systems, Data Structures & Algorithms, Python Programming, Probability & Statistics, Software Engineering, Object-Oriented Design.
+          </div>
+        </div>
+
+        <!-- Certifications List -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <!-- Cert 1 -->
+          <div class="glass-panel spotlight-card reveal stagger-1 rounded-xl border border-slate-700/80 p-5 hover:border-cyan-500/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-lg shrink-0">
+                📜
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Data Analyst Internship Certificate</h4>
+                <p class="text-xs text-cyan-400 font-medium">Knovista Technologies, Kochi (5 Months)</p>
+                <p class="text-xs text-slate-400 mt-1">Excel, Power BI, SQL, Python, Machine Learning & Stakeholder Reporting.</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded text-xs font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 shrink-0 self-start sm:self-auto">
+              Verified
+            </span>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="glass-panel spotlight-card reveal stagger-2 rounded-xl border border-slate-700/80 p-5 hover:border-indigo-500/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-lg shrink-0">
+                🐍
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Python Development Internship Certificate</h4>
+                <p class="text-xs text-indigo-400 font-medium">GSeven Technologies, Thrissur (1 Month)</p>
+                <p class="text-xs text-slate-400 mt-1">Python Programming, Script Testing, Algorithmic Optimization & Debugging.</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded text-xs font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/30 shrink-0 self-start sm:self-auto">
+              Verified
+            </span>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="glass-panel spotlight-card reveal stagger-3 rounded-xl border border-slate-700/80 p-5 hover:border-purple-500/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-lg shrink-0">
+                🌐
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">MERN Stack Development Certification</h4>
+                <p class="text-xs text-purple-400 font-medium">Avodha (8 Months, Online Program)</p>
+                <p class="text-xs text-slate-400 mt-1">MongoDB, Express.js, React.js, Node.js, JavaScript & Full-Stack Architecture.</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded text-xs font-mono bg-purple-500/10 text-purple-300 border border-purple-500/30 shrink-0 self-start sm:self-auto">
+              Verified
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       INTERACTIVE RESUME VIEWER & DOWNLOAD SECTION
+       ======================================================================== -->
+  <section id="resume" class="py-24 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-mono uppercase tracking-wider">
+          Curriculum Vitae
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+          Official <span class="gradient-text">Resume & Credentials</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Review the complete structured resume below or download the verified PDF document.
+        </p>
+
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <a href="assets/Asha_Paulson_Resume.pdf" download="Asha_Paulson_Resume.pdf" class="px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-lg shadow-cyan-500/20 transition-all flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download Official PDF
+          </a>
+
+          <button onclick="window.print()" class="px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm text-slate-300 hover:text-white glass-panel border border-slate-700 hover:border-cyan-400/40 transition-all flex items-center gap-2">
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Print Resume
+          </button>
+        </div>
+      </div>
+
+      <!-- Clean Resume Document Viewer -->
+      <div class="glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-8 sm:p-12 shadow-2xl relative">
+        
+        <!-- Header -->
+        <div class="border-b border-slate-800 pb-8 text-center sm:text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-wide">ASHA PAULSON</h1>
+            <p class="text-sm sm:text-base font-semibold text-cyan-400 font-mono tracking-widest uppercase mt-1">D A T A &nbsp; A N A L Y S T</p>
+          </div>
+          <div class="text-xs text-slate-400 space-y-1 text-center sm:text-right font-mono">
+            <div>+91 7994555985</div>
+            <div>ashapaulson11a@gmail.com</div>
+            <div>Thrissur, Kerala, India</div>
+            <a href="https://linkedin.com/in/asha-paulson1" target="_blank" class="text-cyan-400 hover:underline">linkedin.com/in/asha-paulson1</a>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="py-6 border-b border-slate-800">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-2">PROFESSIONAL SUMMARY</h4>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Data Analyst with a B.Tech in Computer Science and hands-on experience across Excel, SQL, Power BI, and Python, built through an internship and three end-to-end projects in dashboarding, predictive modeling, and fraud detection. Skilled at turning messy data into decision-ready insights via EDA, DAX-driven dashboards, and classification models (Logistic Regression, Random Forest, XGBoost). Seeking a Data Analyst role to apply strong analytical rigor from day one.
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div class="py-6 border-b border-slate-800">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-4">INTERNSHIP EXPERIENCE</h4>
+          
+          <div class="space-y-6">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+                <span class="text-sm font-bold text-white">Data Analyst Intern &bull; <span class="text-cyan-300 font-normal">Knovista Technologies, Kochi</span></span>
+                <span class="text-xs font-mono text-slate-400">May 2026 – Sep 2026 (5 months)</span>
+              </div>
+              <ul class="list-disc list-inside mt-2 text-xs sm:text-sm text-slate-300 space-y-1.5 pl-2">
+                <li>Delivered a complete Power BI project end-to-end — from raw data cleaning through interactive dashboard design — used for ongoing sales and performance reporting.</li>
+                <li>Built dashboards and reports in Excel and Power BI that surfaced trends and KPIs for stakeholder review, reducing manual reporting effort.</li>
+                <li>Contributed to a Lead Conversion Prediction project, applying Python and machine learning to identify high-value leads.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+                <span class="text-sm font-bold text-white">Python Development Intern &bull; <span class="text-indigo-300 font-normal">GSeven Technologies, Thrissur</span></span>
+                <span class="text-xs font-mono text-slate-400">June 2025 (1 month)</span>
+              </div>
+              <ul class="list-disc list-inside mt-2 text-xs sm:text-sm text-slate-300 space-y-1.5 pl-2">
+                <li>Wrote and debugged Python programs as part of an academic internship, strengthening core programming and problem-solving skills.</li>
+                <li>Identified and resolved coding errors across multiple scripts, improving code reliability and readability.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="py-6 border-b border-slate-800">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-4">PROJECTS</h4>
+          
+          <div class="space-y-5">
+            <div>
+              <div class="text-sm font-bold text-white">
+                Lead Conversion Prediction <span class="text-xs text-cyan-400 font-mono font-normal">| Python, Pandas, Scikit-learn, XGBoost</span>
+              </div>
+              <ul class="list-disc list-inside mt-1.5 text-xs sm:text-sm text-slate-300 space-y-1 pl-2">
+                <li>Built an end-to-end lead conversion prediction pipeline: data preprocessing, exploratory data analysis, and feature engineering ahead of model training.</li>
+                <li>Trained and compared Logistic Regression, Random Forest, and XGBoost classifiers; XGBoost achieved 97.95% accuracy and was recommended for deployment.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="text-sm font-bold text-white">
+                Sales Performance Dashboard <span class="text-xs text-indigo-400 font-mono font-normal">| Power BI, DAX, Power Query</span>
+              </div>
+              <ul class="list-disc list-inside mt-1.5 text-xs sm:text-sm text-slate-300 space-y-1 pl-2">
+                <li>Designed an interactive Power BI dashboard tracking sales trends, profitability, and monthly performance for faster, data-driven decision-making.</li>
+                <li>Implemented custom DAX measures, slicers, drill-throughs, and dynamic tooltips, enabling stakeholders to self-serve deeper analysis without additional reports.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="text-sm font-bold text-white">
+                UPI Fraud Detection in E-Commerce <span class="text-xs text-emerald-400 font-mono font-normal">| Python, Machine Learning, Razorpay API — Final-Year Group Project</span>
+              </div>
+              <ul class="list-disc list-inside mt-1.5 text-xs sm:text-sm text-slate-300 space-y-1 pl-2">
+                <li>Integrated Razorpay UPI payments into an e-commerce platform alongside a machine learning-based fraud detection layer, as part of a 4-member final-year team.</li>
+                <li>Applied Logistic Regression, Random Forest, and Gradient Boosting on transaction and behavioral features to flag potentially fraudulent activity in real time.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="py-6 border-b border-slate-800">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-2">EDUCATION</h4>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs sm:text-sm">
+            <span class="font-bold text-white">B.Tech, Computer Science and Engineering</span>
+            <span class="text-slate-400 font-mono">2022 – 2026</span>
+          </div>
+          <p class="text-xs text-slate-300 mt-1">
+            Nirmala College of Engineering, Chalakudy (APJ Abdul Kalam Technological University) &bull; <strong class="text-cyan-400">CGPA: 7.28</strong>
+          </p>
+        </div>
+
+        <!-- Skills Summary -->
+        <div class="py-6">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-3">CORE SKILLS & LANGUAGES</h4>
+          <div class="text-xs text-slate-300 space-y-2">
+            <div><strong class="text-slate-100">Data Analysis:</strong> Data Cleaning, Data Transformation, EDA, Data Validation, Interpretation, Quantitative Analysis.</div>
+            <div><strong class="text-slate-100">Advanced Excel & MS Office:</strong> Pivot Tables & Charts, VLOOKUP, XLOOKUP, INDEX-MATCH, Nested Formulas, Conditional Formatting, Power Query, Dashboards.</div>
+            <div><strong class="text-slate-100">SQL & Databases:</strong> SQL, MySQL, Joins, Filtering, Aggregations, Subqueries, Data Retrieval.</div>
+            <div><strong class="text-slate-100">Power BI & Visualization:</strong> Interactive Dashboards, Power Query, Data Modeling, DAX, Slicers, Drill-Through Reports, KPI Reporting.</div>
+            <div><strong class="text-slate-100">Python & Libraries:</strong> Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, Random Forest.</div>
+            <div><strong class="text-slate-100">Languages:</strong> English (Fluent) &bull; Malayalam (Native)</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       CONTACT & HIRE ME SECTION
+       ======================================================================== -->
+  <section id="contact" class="py-24 bg-slate-900/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-mono uppercase tracking-wider shimmer-badge">
+          Let's Collaborate
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+          Get in Touch &bull; <span class="gradient-text">Hire Asha Paulson</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Seeking a full-time Data Analyst role or exciting contract opportunities. Let's discuss how I can bring analytical rigor to your team.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-5xl mx-auto">
+        
+        <!-- Left: Direct Contact Information -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-6 shadow-xl space-y-6">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              Direct Communication
+            </h3>
+
+            <!-- Email Card -->
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-start justify-between gap-3">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+                  ✉️
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400">Email Address</div>
+                  <div class="text-xs sm:text-sm font-medium text-white break-all">ashapaulson11a@gmail.com</div>
+                </div>
+              </div>
+              <button id="copy-email-btn" title="Copy Email" class="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-700 text-xs">
+                Copy
+              </button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                📞
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Phone & WhatsApp</div>
+                <a href="tel:+917994555985" class="text-xs sm:text-sm font-medium text-white hover:text-cyan-400 transition-colors">
+                  +91 7994555985
+                </a>
+              </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                💼
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">LinkedIn Profile</div>
+                <a href="https://linkedin.com/in/asha-paulson1" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-medium text-cyan-400 hover:underline">
+                  linkedin.com/in/asha-paulson1
+                </a>
+              </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+                📍
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Current Location</div>
+                <div class="text-xs sm:text-sm font-medium text-white">Thrissur / Kochi, Kerala, India</div>
+                <div class="text-[11px] text-slate-400">Open to Relocation & Remote Roles</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel spotlight-card reveal rounded-2xl border border-slate-700/80 p-6 sm:p-8 shadow-2xl">
+            <h3 class="text-xl font-bold text-white mb-2">Send a Direct Message</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mb-6">
+              Have a role in mind or want to discuss analytics projects? Drop a note below.
+            </p>
+
+            <form id="contact-form" class="space-y-4">
+              <div>
+                <label for="form-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                  Your Full Name
+                </label>
+                <input 
+                  type="text" 
+                  id="form-name" 
+                  required 
+                  placeholder="e.g. John Doe / Hiring Manager" 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm text-white placeholder-slate-500 outline-none transition-all"
+                />
+              </div>
+
+              <div>
+                <label for="form-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                  Your Work Email
+                </label>
+                <input 
+                  type="email" 
+                  id="form-email" 
+                  required 
+                  placeholder="john@company.com" 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm text-white placeholder-slate-500 outline-none transition-all"
+                />
+              </div>
+
+              <div>
+                <label for="form-message" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                  Message / Role Details
+                </label>
+                <textarea 
+                  id="form-message" 
+                  rows="4" 
+                  required 
+                  placeholder="Hi Asha, we have an open Data Analyst role and loved your Power BI & ML work..." 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm text-white placeholder-slate-500 outline-none transition-all"
+                ></textarea>
+              </div>
+
+              <button 
+                type="submit" 
+                class="magnetic-btn w-full py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center gap-2 group"
+              >
+                <span>Send Inquiry & Connect</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="border-t border-slate-800 bg-[#060910] py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white font-mono text-xs">
+          AP
+        </div>
+        <div>
+          <div class="font-bold text-slate-200">Asha Paulson &bull; Data Analyst</div>
+          <div class="text-[11px] text-slate-500 font-mono">Turning messy data into decision-ready insights.</div>
+        </div>
+      </div>
+
+      <!-- Quick Footer Links -->
+      <div class="flex flex-wrap items-center gap-5 text-slate-400">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+        <a href="#live-analytics" class="hover:text-cyan-400 transition-colors">Live Analytics</a>
+        <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#resume" class="hover:text-cyan-400 transition-colors">Resume</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+      </div>
+
+      <div>
+        &copy; 2026 Asha Paulson. All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       PROJECT CASE STUDY MODAL
+       ======================================================================== -->
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md modal-overlay">
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto glass-panel rounded-2xl border border-slate-700 p-6 sm:p-8 shadow-2xl modal-content">
+      
+      <!-- Close Button -->
+      <button id="modal-close-btn" class="absolute top-5 right-5 p-2 rounded-xl bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Dynamic Modal Body Content -->
+      <div id="modal-body"></div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       TOAST NOTIFICATION
+       ======================================================================== -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-slate-900 border border-cyan-500/50 text-cyan-300 text-xs sm:text-sm font-medium shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2">
+    Notification
+  </div>
+
+
+  <!-- Application Scripts -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>

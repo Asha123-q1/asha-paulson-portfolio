@@ -1,0 +1,14 @@
+{
+  "name": "asha-paulson-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, interactive portfolio website crafted for **Asha Paulson** (Data Analyst & Computer Science Graduate). Designed with an executive data-tech aesthetic, glassmorphism, responsive UI, dynamic data dashboards, and interactive case study deep-dives.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
